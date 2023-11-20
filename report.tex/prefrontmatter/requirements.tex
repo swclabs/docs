@@ -1,0 +1,158 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage{vntex}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{a4wide,amssymb,epsfig,latexsym,array,hhline,fancyhdr}
+\usepackage[normalem]{ulem}
+\usepackage[makeroom]{cancel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{multicol,longtable,amscd}
+\usepackage{diagbox}%Make diagonal lines in tables
+\usepackage{booktabs}
+\usepackage{alltt}
+\usepackage[framemethod=tikz]{mdframed}% For highlighting paragraph backgrounds
+\usepackage{caption,subcaption}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{lastpage}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{graphicx}							% Standard graphics package
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage[rightcaption]{sidecap}
+
+\usetikzlibrary{calc}
+\newcommand\HRule{\rule{\textwidth}{1pt}}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage[unicode]{hyperref}
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
+\definecolor{bblue}{RGB}{239,239,255}
+\usepackage[normalem]{ulem}
+
+\newtheorem{theorem}{{\bf Định lý}}
+\newtheorem{property}{{\bf Tính chất}}
+\newtheorem{proposition}{{\bf Mệnh đề}}
+\newtheorem{corollary}[proposition]{{\bf Hệ quả}}
+\newtheorem{lemma}[proposition]{{\bf Bổ đề}}
+\theoremstyle{definition}
+\newtheorem{exer}{Bài toán}
+
+\def\thesislayout{	% A4: 210 × 297
+	\geometry{
+		a4paper,
+		total={160mm,240mm},  % fix over page
+		left=25mm,
+		top=30mm,
+	}
+}
+\thesislayout
+
+% \usepackage{fancyhdr}
+% \setlength{\headheight}{40pt}
+% \pagestyle{fancy}
+% \fancyhead{} % clear all header fields
+% \fancyhead[L]{
+%  \begin{tabular}{rl}
+%     \begin{picture}(25,15)(0,0)
+%     \put(0,-8){\includegraphics[width=9mm, height=8mm]{img/hcmut.png}}
+%     %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+%    \end{picture}&
+% 	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+% 	\begin{tabular}{l}
+% 		\textbf{\bf \ttfamily Trường Đại Học Bách Khoa - ĐHQG TP.HCM}\\
+% 		\textbf{\bf \ttfamily Khoa Khoa Học Ứng Dụng}
+% 	\end{tabular} 	
+%  \end{tabular}
+% }
+% \fancyhead[R]{
+% 	\begin{tabular}{l}
+% 		\tiny \bf \\
+% 		\tiny \bf 
+% 	\end{tabular}  }
+% \fancyfoot{} % clear all footer fields
+% \fancyfoot[L]{\scriptsize \ttfamily Báo cáo bài tập lớn - Vật lý đại cương A1}
+% \fancyfoot[R]{\scriptsize \ttfamily Trang {\thepage}/\pageref{LastPage}}
+% \renewcommand{\headrulewidth}{0.3pt}
+% \renewcommand{\footrulewidth}{0.3pt}
+%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
+\everymath{\color{black}}%make in-line maths symbols blue to read/check easily
+
+\sloppy
+\captionsetup[figure]{labelfont={small,bf},textfont={small,it},belowskip=-1pt,aboveskip=-9pt}
+%space remove between caption, figure, and text
+\captionsetup[table]{labelfont={small,bf},textfont={small,it},belowskip=-1pt,aboveskip=7pt}
+%space remove between caption, table, and text
+
+%\floatplacement{figure}{H}%forced here float placement automatically for figures
+%\floatplacement{table}{H}%forced here float placement automatically for table
+%the following settings (11 lines) are to remove white space before or after the figures and tables
+%\setcounter{topnumber}{2}
+%\setcounter{bottomnumber}{2}
+%\setcounter{totalnumber}{4}
+%\renewcommand{\topfraction}{0.85}
+%\renewcommand{\bottomfraction}{0.85}
+%\renewcommand{\textfraction}{0.15}
+%\renewcommand{\floatpagefraction}{0.8}
+%\renewcommand{\textfraction}{0.1}
+\setlength{\floatsep}{5pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{5pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+
+\colorlet{mygray}{black!30}
+\colorlet{mygreen}{green!60!blue}
+\colorlet{mymauve}{red!60!blue}
+
+
+\thesislayout
+\lstset{
+  backgroundcolor=\color{gray!10},  
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breakatwhitespace=false,      
+  breaklines=true,                
+  captionpos=b,                    
+  commentstyle=\color{mygreen}, 
+  extendedchars=true,              
+  frame=single,                   
+  keepspaces=true,             
+  keywordstyle=\color{blue},      
+  language=matlab,                 
+  numbers=none,                
+  numbersep=5pt,                   
+  numberstyle=\tiny\color{blue}, 
+  rulecolor=\color{mygray},        
+  showspaces=false,               
+  showtabs=false,                 
+  stepnumber=5,                  
+  stringstyle=\color{mymauve},    
+  tabsize=3,                      
+  title=\lstname                
+}
+\renewcommand{\baselinestretch}{1.15}
