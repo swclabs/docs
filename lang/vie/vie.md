@@ -2,6 +2,8 @@
 
 ## Kiến trúc hệ thống
 
-👉 [FRONTEND](/lang/vie/backend.md)
-👉 [BACKEND](/lang/vie/backend.md)
-👉 [DATABASE](/lang/vie/database.md)
+👉 [FRONTEND](frontend.md)
+
+👉 [BACKEND](backend.md)
+
+👉 [DATABASE](database.md)
