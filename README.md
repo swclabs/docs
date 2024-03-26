@@ -4,6 +4,8 @@
 
 This eCommerce project aims to build a professional and convenient online platform for buying and selling mobile devices, including smartphones, tablets, accessories, and related services. With the continuous growth of the mobile industry and the rapid development of the online shopping market, this project aims to provide an easy, reliable, and enjoyable shopping experience for consumers.
 
+**Documentation** 👉 [VIE](/lang/vie/vie.md)
+
 ## Key Functions and Features:
 
 - **Wide Range of Product Categories**: Display a variety of mobile devices from leading manufacturers, including smartphones, tablets, headphones, protective cases, and various other accessories.
